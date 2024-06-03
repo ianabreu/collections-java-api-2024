@@ -1,15 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import list.OperacoesBasicas.Cart;
+import list.OperacoesBasicas.Item;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Cart cart = new Cart();
+        cart.displayItems();
+        //cart.addItemToCart("Coca-cola", 9.3, 2);
+        cart.displayItems();
+        cart.addItemToCart("Pizza", 35, 1);
+        cart.displayItems();
+        //cart.addItemToCart("Coca-cola", 9.3, 1);
+        cart.displayItems();
+        System.out.println("O valor total do carrinho é: " + cart.calculateTotalPrice());
+        cart.displayItems();
+        cart.removeItemToCart("Coca-cola");
+        cart.displayItems();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+
     }
 }
