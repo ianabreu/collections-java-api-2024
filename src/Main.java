@@ -1,20 +1,15 @@
-import list.OperacoesBasicas.Cart;
-import list.OperacoesBasicas.Item;
+import list.Pesquisa.BookCatalog;
 
 public class Main {
     public static void main(String[] args) {
-        Cart cart = new Cart();
-        cart.displayItems();
-        //cart.addItemToCart("Coca-cola", 9.3, 2);
-        cart.displayItems();
-        cart.addItemToCart("Pizza", 35, 1);
-        cart.displayItems();
-        //cart.addItemToCart("Coca-cola", 9.3, 1);
-        cart.displayItems();
-        System.out.println("O valor total do carrinho é: " + cart.calculateTotalPrice());
-        cart.displayItems();
-        cart.removeItemToCart("Coca-cola");
-        cart.displayItems();
+        BookCatalog saraiva = new BookCatalog();
+        saraiva.addBook("O Senhor dos Aneis - As Duas Torres", "Tolkien", 1937);
+        saraiva.addBook("A Arte da Guerra", "Sun Tzu", 1981);
+        saraiva.addBook("A Arte da Guerra", "Sun Tzu", 1979);
+        saraiva.addBook("O Senhor dos Aneis - 2", "Tolkien", 1940);
+        System.out.println(saraiva.findByAuthor("tolkien"));
+        System.out.println(saraiva.findByYearInterval(1903, 1912));
+        System.out.println(saraiva.findByTitle("a Arte da Guerra"));
 
 
 
