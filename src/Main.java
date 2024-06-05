@@ -1,3 +1,4 @@
+import list.Ordenacao.OrderPeople;
 import list.Pesquisa.BookCatalog;
 import list.Pesquisa.SumNumbers;
 
@@ -5,16 +6,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        SumNumbers n = new SumNumbers();
-        n.addNumber(3);
-        n.addNumber(5);
-        n.addNumber(10);
-        n.addNumber(-7);
-        System.out.println(n.displayNumbers());
-        n.addNumber(53);
-        System.out.println(n.calculateSum());
-        System.out.println(n.findBiggestNumber());
-        System.out.println(n.findSmallestNumber());
+        OrderPeople p = new OrderPeople();
+        p.addPeople("Ian", 30,1.75);
+        p.addPeople("Augusto", 90,1.1);
+        p.addPeople("Marcia", 29,1.80);
+        System.out.println(p.orderByHeight());
+        p.addPeople("Mimiu", 55,1.63);
+        System.out.println(p.orderByAge());
 
     }
 }
