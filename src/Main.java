@@ -1,3 +1,4 @@
+import list.Ordenacao.OrderNumber;
 import list.Ordenacao.OrderPeople;
 import list.Pesquisa.BookCatalog;
 import list.Pesquisa.SumNumbers;
@@ -6,13 +7,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        OrderPeople p = new OrderPeople();
-        p.addPeople("Ian", 30,1.75);
-        p.addPeople("Augusto", 90,1.1);
-        p.addPeople("Marcia", 29,1.80);
-        System.out.println(p.orderByHeight());
-        p.addPeople("Mimiu", 55,1.63);
-        System.out.println(p.orderByAge());
+        OrderNumber n = new OrderNumber();
+        n.addNumber(3);
+        n.addNumber(17);
+        n.addNumber(22);
+        n.addNumber(15);
+        n.addNumber(9);
+        System.out.println(n.orderAscending());
+        System.out.println(n.orderDescending());
 
     }
 }
